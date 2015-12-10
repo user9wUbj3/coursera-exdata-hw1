@@ -19,6 +19,8 @@ if (fetch_data_from_web) {
                 sep=';', col.names=colNames, na.strings="?")
 }
 
+d <- subset(d, d$Date=="1/2/2007" | d$Date=="2/2/2007")
+
 png(file="plot1.png", width=480, height=480)
 hist(d$PAct,
      col="red",
